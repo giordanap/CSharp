@@ -15,6 +15,36 @@ namespace firstApplication
 
             Console.WriteLine( myCircle.Area(4) );
 
+            ConvertDollarSoles obj = new ConvertDollarSoles();
+
+            obj.ChangeValueDollar(-4.5);// dollar update
+
+            Console.WriteLine(obj.Convert(20));
+
+            Car car1 = new Car();
+
+            Console.WriteLine(car1.getInfo());
+
+            Car car2 = new Car(4500.25, 1200.35);
+
+            Console.WriteLine(car2.getInfo());
+
+            Car car3 = new Car();
+
+            car3.setExtras(true, "cuero");
+
+            Console.WriteLine(car3.getInfo());
+            Console.WriteLine(car3.getExtras());
+
+            doTask();
+        }
+
+        static void doTask()
+        {
+            Point origen = new Point();
+            Point destino = new Point(128,80);
+
+            Console.WriteLine("La distancia es:" + destino.DistanceTo(origen));
         }
     }
     class Circle
@@ -26,5 +56,62 @@ namespace firstApplication
         }
     }
 
+    class ConvertDollarSoles
+    {
+        private double dollar = 4.1;
+        public double Convert(double amount)
+        {
+            return amount * dollar;
+        }
+
+        public void ChangeValueDollar(double newValue)
+        {
+            if (newValue < 0 )
+            {
+                Console.WriteLine("The value of dollar can't be negative");
+            } else {
+                dollar = newValue;
+            }
+        }
+    }
+
+    // Propiedades, getter and setter
+    partial class Car
+    {
+        private int wheels;
+        private double length;
+        private double width;
+        private bool airConditioner;
+        private string upholstery;
+
+        public int getWheels() { return wheels; }
+        public string getInfo() { return "wheels:" + wheels + ", length:" + length + ", width: " + width; }
+        public void setExtras(bool airConditioner, string upholstery)
+        {
+            this.airConditioner = airConditioner;
+            this.upholstery = upholstery;
+        }
+        public string getExtras() { return "Extras of car\n" + "airConditioner:" + airConditioner + ", upholstery:" + upholstery; }
+    }
+    // Constructores
+    partial class Car 
+    {
+        public Car()
+        {
+            wheels = 4;
+            length = 2300.5;
+            width = 0.800;
+            upholstery = "tela";
+
+        }
+        public Car(double length, double width)
+        {
+            wheels = 4;
+            this.length = length; // Usamos el this para referenciarnos a la propiedad
+            this.width = width;
+            upholstery = "tela";
+        }
+
+    }
 }
 
