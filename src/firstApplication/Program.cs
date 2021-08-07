@@ -1,4 +1,5 @@
 ﻿using System;
+// using static System.Math; // con esto presindimos del prefijo "Math."
 
 namespace firstApplication
 {
@@ -37,15 +38,45 @@ namespace firstApplication
             Console.WriteLine(car3.getExtras());
 
             doTask();
+
+            // clase anonima
+            var miVariable = new
+            {
+                Nombre = "Juan", // el compilador determina el tipo de dato
+                Edad = 19
+            };
+
+            var miOtraVariable = new
+            {
+                Nombre = "Ana",
+                Edad = 25
+            };
+
+            // El compilador reconoce que pertenecen a la misma clase por los campos
+            miVariable = miOtraVariable;
+
+            Console.WriteLine(miVariable.Nombre);
+            Console.WriteLine(miVariable.Edad);
+
+            int[] edades;
+
+            edades = new int[4];
+
+            Console.WriteLine(edades[2]);
+
         }
 
         static void doTask()
         {
             Point origen = new Point();
             Point destino = new Point(128,80);
+            Point otherPoint = new Point();
 
             Console.WriteLine("La distancia es:" + destino.DistanceTo(origen));
+            
+            Console.WriteLine("Numero de objetos creados {0}",Point.ContadorDeObjetos());
         }
+
     }
     class Circle
     {
