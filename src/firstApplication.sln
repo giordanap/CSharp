@@ -13,7 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "puntoRectangulo", "puntoRec
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ColombiaAutos", "ColombiaAutos\ColombiaAutos.csproj", "{E828D037-3EE1-4C5D-A061-1F3CFE1BDD6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjercicioHerencia", "EjercicioHerencia\EjercicioHerencia.csproj", "{D3822844-087A-4125-A040-62A3B01B1D68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EjercicioHerencia", "EjercicioHerencia\EjercicioHerencia.csproj", "{D3822844-087A-4125-A040-62A3B01B1D68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvisosVarios", "AvisosVarios\AvisosVarios.csproj", "{A010D52F-ABCE-43B9-9887-2AAA573E711D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hermanitos", "hermanitos\hermanitos.csproj", "{C3518321-7D21-4662-ADC1-DDC58C66F90B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{D3822844-087A-4125-A040-62A3B01B1D68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3822844-087A-4125-A040-62A3B01B1D68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3822844-087A-4125-A040-62A3B01B1D68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A010D52F-ABCE-43B9-9887-2AAA573E711D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A010D52F-ABCE-43B9-9887-2AAA573E711D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A010D52F-ABCE-43B9-9887-2AAA573E711D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A010D52F-ABCE-43B9-9887-2AAA573E711D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3518321-7D21-4662-ADC1-DDC58C66F90B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3518321-7D21-4662-ADC1-DDC58C66F90B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3518321-7D21-4662-ADC1-DDC58C66F90B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3518321-7D21-4662-ADC1-DDC58C66F90B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

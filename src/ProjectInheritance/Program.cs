@@ -47,6 +47,15 @@ namespace ProjectInheritance
             Console.WriteLine("El numero de patas es: " + IMTcaballito.NumeroPatas());
             Console.WriteLine("Salta con " + ISCPcaballito.NumeroPatas() + " patas");
 
+            Lagartija Juancho = new Lagartija("Juancho");
+
+            Juancho.Respirar();
+            Juancho.GetNombre();
+
+            Animal Juan = new Humano("Juan");
+            Juan.Respirar();
+            Juan.GetNombre();
+
         }
 
     }
@@ -69,28 +78,54 @@ namespace ProjectInheritance
     {
         int NumeroPatas();
     }
-    class Mamiferos
+
+    abstract class Animal
+    {
+        public void Respirar() 
+        {
+            Console.WriteLine("Soy capaz de respirar");
+        }
+
+        public abstract void GetNombre();
+    }
+
+    class Lagartija : Animal
+    {
+        private string nombreReptil;
+
+        public Lagartija(string nombreReptil)
+        {
+            this.nombreReptil = nombreReptil;
+        }
+
+        public override void GetNombre()
+        {
+            Console.WriteLine("El nombre del reptil es " + nombreReptil);
+        }
+
+    }
+
+    class Mamiferos : Animal
     {
         public Mamiferos(String nombre)
         {
             nombreSerVivo = nombre;
         }
 
-        protected void Respirar() // Es accesible de la clase principal y las que heredan.
-        {
-            Console.WriteLine("Soy capaz de respirar");
-        }
         public virtual void Pensar() // Metodo modificable
         {
             Console.WriteLine("Pensamiento basico instintivo");
         }
+
         public void CuidarCrias() // Public es accesible desde cualquier otra clase del programa.
+                                  // Es accesible de la clase principal y las que heredan.
         {
             Console.WriteLine("Cuido de mis crias hasta que se valgan por si solas");
         }
-        public void GetNombre()
+
+        public override void GetNombre()
         {
-            Console.WriteLine("El nombre del ser vivo es " + nombreSerVivo);
+            Console.WriteLine("El nombre del mamifero es " + nombreSerVivo);
         }
 
         private String nombreSerVivo; // Es mas recomendable encapsular los objetos con private. 
