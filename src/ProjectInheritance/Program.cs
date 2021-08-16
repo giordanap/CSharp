@@ -183,11 +183,24 @@ namespace ProjectInheritance
         { 
 
         }
-        public override void Pensar() // Es una modificacion o sobre escritura del metodo. No es uno diferente.
+        public sealed override void Pensar() // Es una modificacion o sobre escritura del metodo. No es uno diferente.
         {
             Console.WriteLine("Soy capaz de pensar");
         }
     }
+
+    //class Adolescente : Humano
+    //{
+    //    public Adolescente(string nombreAdolescente) : base(nombreAdolescente)
+    //    {
+
+    //    }
+
+    //    //public override void Pensar() // No se puede sobreescribir porque el metodo es sellado.
+    //    //{
+    //    //    Console.WriteLine("Las hormonas me impiden pensar con claridad"); ;
+    //    //}
+    //}
 
     class Gorila : Mamiferos, IMamiferosTerresters
     {
@@ -207,6 +220,14 @@ namespace ProjectInheritance
         public int NumeroPatas()
         {
             return 2;
+        }
+    }
+
+    class Chimpance : Gorila 
+    {
+        public Chimpance(string nombreChimpance): base(nombreChimpance)
+        {
+
         }
     }
 }
